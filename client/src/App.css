@@ -1,0 +1,115 @@
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+h4 {
+  font-family: 'PT Serif', serif;
+  color: #000000;
+}
+
+#submitButton {
+  background-color: #7cc444;
+  font-family: 'PT Serif', serif;
+  border-color: #cccccc;
+  color: #ffffff;
+}
+
+#Register {
+  width: 115px;
+  height: 50px;
+  margin-top: -50px;
+
+  background-color: #7cc444;
+  font-family: 'PT Serif', serif;
+  border-color: #cccccc;
+}
+
+#searchBtn {
+  background-color: #7cc444;
+  font-family: 'PT Serif', serif;
+  color: #ffffff;
+}
+
+#loginForm {
+ margin-top: 20px; 
+}
+
+
+#signupButton {
+  height: 35px;
+  margin-top: 5px;
+  font-size: 18px;
+  font-family: 'PT Serif', serif;
+  background-color: #1cc4ec;
+  border-color: #cccccc;
+  margin-left: 50px;
+  background-color: #1cc4ec;
+}
+
+#loginButton {
+
+  margin-top: 5px;
+  font-size: 18px;
+  font-family: 'PT Serif', serif;
+  background-color: #7cc444;
+  border-color: #cccccc;
+  margin-left: 50px;
+  color:#696969;
+ 
+}
+
+#toggleButton {
+  color:#696969;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  border-color: #cccccc;
+}
+
+#videoPlayer {
+  margin-top: 100px;
+  margin-left: -200px;
+  height: 200px;
+  width: 200px;
+}
+
+#webCam {
+  border-color: #1cc4ec;
+  border-radius: 2px;
+}
+
+#captureVideo {
+  background-color: #7cc444;
+  font-family: "Rammetto One", cursive;
+  color: #ffffff;
+  /*margin-top: 24px;
+  margin-left: -400px;*/
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
