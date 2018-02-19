@@ -30,29 +30,11 @@ const apiRoutes=require("./controller/apiRoutes");
 
 //Configuring Cloudinary
 cloudinary.config({
-    cloud_name: cloudinaryKeys.cloud_name,
-    api_key: cloudinaryKeys.cloudinary_api_key,
-    api_secret: cloudinaryKeys.cloudinary_api_secret
+    cloud_name: process.env.CLOUD_NAME || cloudinaryKeys.cloud_name,
+    api_key: process.env.API_KEY || cloudinaryKeys.cloudinary_api_key,
+    api_secret: process.env.API_SECRET || cloudinaryKeys.cloudinary_api_secret
 });
 
-// cloudinary.config({
-
-
-//   cloud_name: process.env.CLOUD_NAME,
-//   api_key: process.env.API_KEY,
-//   api_secret: process.env.API_SECRET
-
-
-// });
-
-// cloudinary.config({
-
-//   cloud_name: cloudinaryKeys.cloud_name,
-//   api_key: cloudinaryKeys.cloudinary_api_key,
-//   api_secret: cloudinaryKeys.cloudinary_api_secret
-
-
-// });
 
 // passport.use(new OAuth2Strategy({
 //     authorizationURL: 'https://www.example.com/oauth2/authorize',
@@ -73,9 +55,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Configuring mongoose to use promises.
-mongoose.Promise = Promise;
+
 const mongoDB_URI = process.env.MONGODB_URI || "mongodb://localhost/captivaDB";
-mongoose.connect(mongoDB_URI, {});
+mongoose.Promise = Promise;
+mongoose.connect(mongoDB_URI);
 
 
 //auth routes
