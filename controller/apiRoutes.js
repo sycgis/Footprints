@@ -40,7 +40,7 @@ module.exports.postNew=(req,res)=>{
                         .then(function(dbMedia) {
                           console.log("database updated")
                           console.log(dbMedia);
-                          return db.User.findOneAndUpdate({ username:username} , { $push: { media: dbMedia._id } }, { new: true });
+                          db.User.findOneAndUpdate({ username:username} , { $push: { media: dbMedia._id } }, { new: true });
                           res.sendStatus(200);
                         })
                         .catch(function(err) {
