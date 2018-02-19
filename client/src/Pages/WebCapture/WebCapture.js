@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from "jquery";
 import {Grid, Col, Row} from 'react-bootstrap';
 import Webcam from 'react-webcam';
 import axios from "axios";
@@ -30,11 +29,14 @@ capture = () => {
         username:localStorage.getItem("username")
     };
     console.log(newMedia);
-    axios.post("/api/media", newMedia, function (req,res){
-
+    axios.post("/api/media", newMedia)
+      .then(res=>{
       console.log(res);
-     // this.props.history.push("/display");
-    });  
+     this.props.history.push("/display");
+    })
+      .catch(err=>{
+        console.log(err)
+      });  
 
     };
 
@@ -66,10 +68,14 @@ getAll=()=>{
     };
     console.log(newMedia);
     
-    axios.post("/api/loc/media", newMedia, function (req,res){
+    axios.post("/api/loc/media", newMedia)
+      .then(res=>{
       console.log(res);
-      //this.props.history.push("/display");
-    });  
+     this.props.history.push("/display");
+    })
+      .catch(err=>{
+        console.log(err)
+      });  
     };
 
     const err = err=>{

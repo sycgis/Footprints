@@ -3,9 +3,9 @@ import React from "react";
 import { Grid, Row, Col,  } from "react-bootstrap";
 import axios from "axios";
 import PawLogo from "../../utils/assets/images/PawLogo.png";
-import Background from "../../utils/assets/images/streetPhoto.png";
+// import Background from "../../utils/assets/images/streetPhoto.png";
 import "./Login.css";
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+// import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import {
   Navbar,
